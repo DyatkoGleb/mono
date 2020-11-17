@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/dc6f15c0d7.js"></script>
+    <title>Автостоянка</title>
+</head>
+
+<body class="index">
+    <nav class="container d-flex justify-content-between align-items-center">
+        <div class="logo">Автостоянка</div>
+        <a class="link-page" href="create.html">Создать</a>
+    </nav>
+    
+    <main class="pb-3">
+        <div class="overlay"></div>
+
+        <div class="info container my-3">На стоянке <span id="number-parked-cars"></span></div>
+
+        <div class="box-table container p-3" id="box-table">
+            <div class="row justify-content-between align-items-center m-0" id="table-header">
+                <div class="col">
+                    <div class="table-title py-3" id="table-title">Все клиенты</div>
+                </div>
+
+                <div class="col order-lg-3 d-flex justify-content-end">
+                    <div class="btn-another-table d-flex align-items-center c-p" id="btn-another-table" onclick="showAnotherTable()">
+                        Стоянка <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-7 d-none" id="car-status-manager-form">
+                    <div class="row m-0 align-items-center">
+                        <div class="col p-1">
+                            <select class="field-change-car-status w-100" id="client-select"></select>
+                        </div>
+                        <div class="col p-1">
+                            <select class="field-change-car-status w-100" id="car-select"></select>
+                        </div>
+                        <div class="col p-1">
+                            <input class="field-change-car-status w-100 d-none" type="submit" id="btn-change-car-status">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tables-wrapper d-flex" id="tables-wrapper">
+                <div class="table-wrapper w-100 h-max mr-3" id="table-wrapper-cars">
+                    <table class="table-cars w-100" id="table-cars"></table>
+
+                </div>
+
+                <div class="table-wrapper w-100 h-max" id="table-wrapper-parked-cars">
+                    <table class="table-cars w-100" id="table-parked-cars"></table>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="error-box hide form btn-form position-absolute c-p d-none" id="error-box" onclick="error('', this)"></div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

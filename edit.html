@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/dc6f15c0d7.js"></script>
+    <title>Редактирование</title>
+</head>
+
+<body>
+    <nav class="container d-flex justify-content-between align-items-center">
+        <a class="logo" href="index.html">Автостоянка</a>
+        <a class="link-page" href="create.html">Создать</a>
+    </nav>
+
+    <main class="container">
+        <div class="row w-100 m-0" id="wrapper-forms">
+            
+            <div class="col-12 col-md-6 col-lg-4" id="block-create-btns">
+                <div class="form btn-form c-p" onclick="addNewCar('new-car')">
+                    <span class="form-title">Добавить машину <i class="fa fa-plus" aria-hidden="true"></i></span>
+                </div>
+    
+                <div class="form btn-form c-p" onclick="addNewCar('end')">
+                    <span class="form-title">Готово <i class="fa fa-check" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="edit-layer position-absolute d-none" id="edit-layer">
+        <div class="container h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="form-edit form" id="form-edit"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="error-box hide form btn-form position-absolute c-p d-none" id="error-box" onclick="error('', this)"></div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

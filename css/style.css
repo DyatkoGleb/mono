@@ -1,0 +1,301 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.index {
+    background-image: url(../img/parking.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+::-webkit-scrollbar {
+	background: none;
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: #777;
+    border-radius: 5px;
+    width: 5px;
+}
+
+
+@font-face{
+    font-family: 'Comfortaa-Light';
+    src: url('../fonts/Comfortaa/Comfortaa-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Comfortaa-Bold';
+    src: url('../fonts/Comfortaa/Comfortaa-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Comfortaa-Bold', sans-serif;
+    text-decoration: none !important;
+    color: black !important;
+    outline: none;
+}
+
+tr {
+    border-bottom: 1px solid #bbb;
+}
+
+input[type="text"] {
+    margin: 3px 0 !important;
+    padding: 10px 0 5px 0;
+    width: 100%;
+    background-color: none;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    border-radius: 0;
+    font-family: 'Comfortaa-Light', sans-serif;
+}
+input[type="text"]:focus {
+    border-bottom: 1px solid black;
+}
+input[type="text"]:focus::placeholder {
+    color: #cfcfcf;
+}
+input[type="radio"] {
+    width: max-content;
+}
+.d-grid {
+    display: grid;
+}
+.c-p {
+    cursor: pointer;
+}
+.w-max {
+    width: max-content;
+}
+.h-max {
+    height: max-content;
+}
+
+.form {
+    position: relative;
+    margin: 10px auto;
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 20px);
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px #00000015;
+    overflow: hidden;
+}
+.btn-form {
+    padding: 14px;
+    height: max-content;
+    transition: .25s;
+}
+.btn-form:hover {
+    box-shadow: 0px 10px 10px #00000028;
+}
+.btn-form:focus {
+    box-shadow: 0px 10px 10px #00000028;
+}
+.form-title {
+    user-select: none;
+}
+.form-body {
+    margin: 10px 0;
+}
+.info-about {
+    padding: 12px 0;
+    font-family: 'Comfortaa-Light', sans-serif;
+}
+.error-box {
+    left: 20px;
+    bottom: 20px;
+    width: max-content;
+    color: red !important;
+    transition: .25s;
+    z-index: 999;
+}
+.btn-edit-form {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    padding: 5px;
+    cursor: pointer;
+    transition: .25s;
+}
+.btn-delete-form, .btn-close-edit-form {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    transition: .25s;
+}
+.btn-delete-form:hover, .btn-edit-form:hover, .btn-close-edit-form:hover {
+    opacity: .5;
+}
+
+
+
+
+/* NAV */
+
+nav {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 0;
+    background-color: white;
+    z-index: 997;
+}
+.logo {
+    font-size: 30px;
+    user-select: none;
+}
+.link-page {
+    transition: .25s;
+}
+.link-page:hover {
+    color: #555 !important;
+}
+
+
+
+/* MAIN */
+
+main {
+    position: relative;
+    padding-top: 85px;
+    min-height: 100vh;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fffd, #fffa, #fff2);
+    transition: .6s;
+}
+.info {
+    position: relative;
+    user-select: none;
+}
+.box-table {
+    position: relative;
+    width: 100%;
+    background-color: #fffd;
+    transition: .5s;
+    overflow: hidden;
+}
+.table-title {
+    font-size: 20px;
+    user-select: none;
+}
+.btn-another-table:hover {
+    transition: .25s;
+}
+.btn-another-table:hover {
+    color: #555 !important;
+}
+.field-change-car-status {
+    padding: 10px;
+    margin: 0;
+    max-height: 40px;
+    background: none;
+    border: 1px solid black;
+}
+.tables-wrapper {
+    position: relative;
+    left: 0;
+    width: calc(200% + 1rem);
+    transition: .5s;
+}
+.table-wrapper {
+    overflow-x: auto;
+}
+.table-cars {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+th, td {
+    padding: 7px;
+}
+.btn-edit {
+    cursor: pointer;
+    transition: .2s;
+}
+.btn-edit:hover {
+    opacity: .5;
+}
+.btn-delete {
+    cursor: pointer;
+    transition: .25s;
+}
+.btn-delete:hover {
+    opacity: .5;
+}
+.btn-scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: .20s;
+}
+.btn-scroll:hover {
+    color: #555 !important;
+}
+
+
+
+/* EDIT PAGE */
+
+.edit-layer {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0009;
+    z-index: 998;
+}
+
+.btn-park-it {
+    margin-left: 5px;
+    margin-bottom: -5px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+	transform-style: preserve-3d;
+}
+.box-img-btn-park-it {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+	transform-style: preserve-3d;
+}
+.front-btn-park-it { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/car.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+}
+.back-btn-park-it {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/parking.svg);
+    transform: rotateY(180deg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+}

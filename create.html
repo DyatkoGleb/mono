@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/dc6f15c0d7.js"></script>
+    <title>Создание</title>
+</head>
+
+<body>
+    <nav class="container d-flex justify-content-between align-items-center">
+        <a class="logo" href="index.html">Автостоянка</a>
+    </nav>
+    
+    <main class="container">
+        <div class="row w-100 m-0">
+            <div class="col-12 col-md-6 col-lg-4" id="client-form">
+                <div class="form">
+                    <span class="form-title">Данные о клиенте</span>
+                    
+                    <div class="form-body d-grid">
+                        <input type="text" name="full-name" placeholder="ФИО" autofocus>
+                        <input type="text" name="phone-number" placeholder="Телефон без (+7/8)">
+                        <input type="text" name="address" placeholder="Адрес">
+                        <div class="d-flex justify-content-center pt-4 bn-2">
+                            <span>М</span>
+                            <input class="mr-3" type="radio" name="gender" value="1" checked> 
+                            <span>Ж</span>
+                            <input type="radio" name="gender" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form">
+                    <span class="form-title">Данные о машине</span>
+    
+                    <div class="form-body d-grid">
+                        <input type="text" name="brand" placeholder="Марка">
+                        <input type="text" name="model" placeholder="Модель">
+                        <input type="text" name="color" placeholder="Цвет">
+                        <input type="text" name="number" placeholder="Гос номер">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" id="block-create-btns">
+                <div class="form btn-form c-p" onclick="addNewClient('new-car')">
+                    <span class="form-title">Добавить машину <i class="fa fa-plus" aria-hidden="true"></i></span>
+                </div>
+    
+                <div class="form btn-form c-p" onclick="addNewClient('end')">
+                    <span class="form-title">Готово <i class="fa fa-check" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="error-box hide form btn-form position-fixed c-p d-none" id="error-box" onclick="error('', this)"></div>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
